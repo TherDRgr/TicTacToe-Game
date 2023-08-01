@@ -13,10 +13,10 @@ function updateScore(winner) {
 
 // Function to display the score on the page
 function displayScore() {
-  var scoreDiv = document.getElementById("score");
-  scoreDiv.innerHTML = "Player X: " + playerXScore + "  Player O: " + playerOScore;
+  var scoreDiv = document.querySelector(".scoreCounter");
+  scoreDiv.innerHTML = `
+    <h1>Score</h1>
+    <p>PlayerX: ${playerXScore}</p>
+    <p>PlayerO: ${playerOScore}</p>
+  `;
 }
-
-var winner = "playerX";
-updateScore(winner);
-displayScore();
